@@ -80,7 +80,7 @@ open class BaseActivity : FragmentActivity() {
             if (context != null) {
                 try {
                     verName = context.packageManager.getPackageInfo(
-                        "com.guoshi.jjt", 0
+                        "com.guoshi.licaishi", 0
                     ).versionName
                 } catch (e: PackageManager.NameNotFoundException) {
                     Log.e("msg", e.message)
