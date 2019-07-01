@@ -146,7 +146,7 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             if ("" != textString && textString != null) {
                 val span = ForegroundColorSpan(myContext.resources.getColor(R.color.red))//要显示的颜色
                 val builder = SpannableStringBuilder(textString)
-                val index = textString!!.indexOf(KEY!!)//从第几个匹配上
+                val index = textString!!.toLowerCase().indexOf(KEY!!.toLowerCase())//从第几个匹配上
                 if (index != -1) {//有这个关键字用builder显示
                     builder.setSpan(span, index, index + KEY!!.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                     publicname.text = builder
@@ -165,12 +165,12 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             if ("" != textString && textString != null) {
                 val span = ForegroundColorSpan(myContext.resources.getColor(R.color.red))//要显示的颜色
                 val builder = SpannableStringBuilder(textString)
-                val index = textString!!.indexOf(KEY!!)//从第几个匹配上
+                val index = textString!!.toLowerCase().indexOf(KEY!!.toLowerCase())//从第几个匹配上
                 if (index != -1) {//有这个关键字用builder显示
                     builder.setSpan(span, index, index + KEY!!.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                     privatename.text = builder
                 } else {//没有则直接显示
-                    privatename.setText(textString)
+                    privatename.text = textString
                 }
             }
 
@@ -186,7 +186,7 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             if ("" != textString && textString != null) {
                 val span = ForegroundColorSpan(myContext.resources.getColor(R.color.red))//要显示的颜色
                 val builder = SpannableStringBuilder(textString)
-                val index = textString!!.indexOf(KEY!!)//从第几个匹配上
+                val index = textString!!.toLowerCase().indexOf(KEY!!.toLowerCase())//从第几个匹配上
                 if (index != -1) {//有这个关键字用builder显示
                     builder.setSpan(span, index, index + KEY!!.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                     backproductname.text = builder
@@ -205,7 +205,7 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             if ("" != textString && textString != null) {
                 val span = ForegroundColorSpan(myContext.resources.getColor(R.color.red))//要显示的颜色
                 val builder = SpannableStringBuilder(textString)
-                val index = textString!!.indexOf(KEY!!)//从第几个匹配上
+                val index = textString!!.toLowerCase().indexOf(KEY!!.toLowerCase())//从第几个匹配上
                 if (index != -1) {//有这个关键字用builder显示
                     builder.setSpan(span, index, index + KEY!!.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                     publiccompanyname.text = builder
@@ -224,7 +224,7 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             if ("" != textString && textString != null) {
                 val span = ForegroundColorSpan(myContext.resources.getColor(R.color.red))//要显示的颜色
                 val builder = SpannableStringBuilder(textString)
-                val index = textString!!.indexOf(KEY!!)//从第几个匹配上
+                val index = textString!!.toLowerCase().indexOf(KEY!!.toLowerCase())//从第几个匹配上
                 if (index != -1) {//有这个关键字用builder显示
                     builder.setSpan(span, index, index + KEY!!.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
                     fundmname.text = builder
@@ -408,7 +408,7 @@ class MvvmCommonAdapter : RecyclerView.Adapter<MvvmCommonAdapter.CommonHolder>, 
             .subscribe(object : BaseObserver<String>() {
                 @Throws(Exception::class)
                 override fun onSuccees(t: BaseEntity<String>) {
-                    CustomToast.showToast(myContext, t.message)
+                    CustomToast.showToast(myContext, t.message!!)
                 }
 
                 @Throws(Exception::class)
@@ -448,7 +448,7 @@ val observable1 = RetrofitFactory.getInstence(myContext)!!.API()
             .subscribe(object : BaseObserver<String>() {
                 @Throws(Exception::class)
                 override fun onSuccees(t: BaseEntity<String>) {
-                    CustomToast.showToast(myContext, t.message)
+                    CustomToast.showToast(myContext, t.message!!)
                 }
 
                 @Throws(Exception::class)
