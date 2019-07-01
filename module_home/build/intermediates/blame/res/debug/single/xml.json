@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "F:\\Android studio demo\\guoshi\\licaishi\\module_home\\build\\intermediates\\res\\merged\\debug\\xml\\permission_file_paths.xml",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-2\\files-2.1\\2f5d6259155908f5003456392552928e\\res\\xml\\permission_file_paths.xml"
+    },
+    {
+        "merged": "F:\\Android studio demo\\guoshi\\licaishi\\module_home\\build\\intermediates\\res\\merged\\debug\\xml\\network_security_config.xml",
+        "source": "F:\\Android studio demo\\guoshi\\licaishi\\baselib\\build\\intermediates\\packaged_res\\debug\\xml\\network_security_config.xml"
+    }
+]

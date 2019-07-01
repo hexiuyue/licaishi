@@ -1,0 +1,1 @@
+include ':app', ':MPChartLib', ':baselib', ':module_splash_login', ':module_main', ':module_home', ':module_mine', ':module_optional', ':module_study'
