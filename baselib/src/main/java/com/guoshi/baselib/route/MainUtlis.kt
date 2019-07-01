@@ -1,4 +1,4 @@
-package com.guoshi.baselib.route;
+package com.guoshi.baselib.route
 
 /**
  * 国时智能
@@ -6,6 +6,6 @@ package com.guoshi.baselib.route;
  * 创建时间：2019/4/9
  * 文件描述：main组件界面跳转规则
  */
-public class MainUtlis {
-    public static final String MAIN="/main/mainactivity";
+object MainUtlis {
+    const val MAIN = "/main/mainactivity"
 }

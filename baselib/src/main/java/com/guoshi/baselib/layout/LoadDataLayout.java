@@ -354,7 +354,7 @@ public class LoadDataLayout extends FrameLayout {
      * @param listener
      */
     public void setRefreshListener(OnClickListener listener) {
-//        emptyView.setOnClickListener(listener);
+        //        emptyView.setOnClickListener(listener);
         errorView.setOnClickListener(listener);
     }
 
